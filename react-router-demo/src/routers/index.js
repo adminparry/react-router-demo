@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch,Link } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Loadable from 'react-loadable'
 import Loading from './Loading';
 
@@ -28,7 +28,7 @@ const Routers = () => {
 
           <Route exact path="/foo" component={ Foo } />
           <Route exact path="/about" component={ About } />
-          
+
           <Route component={NoFound} />
         </Switch>
     </Router>
