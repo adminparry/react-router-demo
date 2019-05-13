@@ -3,19 +3,17 @@ import ReactDOM from 'react-dom';
 
 import Routers from './Router';
 import * as serviceWorker from './serviceWorker';
-import { Provider } from 'react-redux'
-import { store } from "./reducers";
 
 
 const rootEl = document.getElementById('root');
 
-ReactDOM.render(<Provider store={store}><Routers /></Provider>, rootEl);
+ReactDOM.render(<Routers />, rootEl);
 
 if (module.hot) {
 
   module.hot.accept("./Router", () => {
 
-    ReactDOM.render(<Provider store={store}><Routers /></Provider>, rootEl);
+    ReactDOM.render(<Routers />, rootEl);
   });
 }
 // If you want your app to work offline and load faster, you can change

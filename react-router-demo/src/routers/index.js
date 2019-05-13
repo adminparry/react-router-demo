@@ -19,10 +19,6 @@ const About = Loadable({
   loader: () => import(/* webpackChunkName:"About" */'../components/about'),
   loading: Loading
 })
-const Counter = Loadable({
-  loader: () => import(/* webpackChunkName:"Counter" */'../components/counter'),
-  loading: Loading
-})
 
 const Routers = () => {
   return (
@@ -32,7 +28,6 @@ const Routers = () => {
 
           <Route exact path="/foo" component={ Foo } />
           <Route exact path="/about" component={ About } />
-          <Route exact path="/counter" component={ Counter } />
 
           <Route component={NoFound} />
         </Switch>

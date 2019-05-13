@@ -14,9 +14,7 @@ class Home extends React.Component {
 		        <p>
 		            <Link to="/404">Not Found</Link>
 		        </p>
-		        <p>
-		            <Link to="/counter">counter</Link>
-		        </p>
+		     
 
 		    </h2>
 		)
