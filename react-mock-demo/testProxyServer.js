@@ -6,9 +6,9 @@ const app = http.createServer((req, res)=>{
 	const { pathname } = url.parse(req.url);
 
 	if(pathname == "/art"){
-		res.end(JSON.stringify({status:"ok", detail:"test proxy result"}))
+		res.end(JSON.stringify({status:999, detail:"test proxy result"}))
 	}else{
-		res.end(JSON.stringify({status:"not found"}))
+		res.end(JSON.stringify({status:666}))
 	}
 })
 
