@@ -9,23 +9,26 @@ export default class TestProxy extends React.Component {
 	
 	onSearch(){
 		const self = this;
-		let url = "/art"
+		let url = "/sugrec"
 		let xhr = new XMLHttpRequest();
 		xhr.open("GET", url, true);
 		xhr.send();
 		xhr.onreadystatechange = function(){
-			if (xhr.readyState == 4 && xhr.status == 200 || xhr.status == 304) { 
+			if (xhr.readyState === 4 && xhr.status === 200 || xhr.status === 304) { 
 
 				self.setState({text:xhr.responseText})
 			}
 		}
+	}
+	onClickHandler(e){
+		console.log(e.clientX)
 	}
 	render(){
 		
 		return (
 			<div>
 				<input type="text" />
-				<button onClick={ this.onSearch}>百度</button>
+				<button onClick={ e=>this.onSearch(e) }>百度</button>
 				<p>result:{this.state.text}</p>
 			</div>
 		)

@@ -1,25 +1,28 @@
-import { observable , computed, action } from "mobx"
+import { computed , decorate, observable} from "mobx"
 
-export default class counter_VM {
-  @observable firstName = '';
-  @observable lastName = '';
- 
-  @computed get fullName() {
-    const { firstName, lastName } = this;
-    if (!firstName && !lastName) {
-      return 'Please input your name!'
-    } else {
-      return firstName + ' ' + lastName;
-    }
-  };
- 
-  @action.bound
-  setValue(key, event) {
-    this[key] = event.target.value;
+
+class CounterVm {
+
+
+
+
+
+  count = 0;
+
+  get isOdd(){
+  	return this.count % 2 === 1
   }
-  @action.bound
-  doReset() {
-    this.firstName = '';
-    this.lastName = '';
+  increment() {
+    this.count++;
+  }
+
+  decrement() {
+    this.count--;
   }
 }
+decorate(CounterVm, {
+	count: observable,
+    isOdd: computed
+})
+
+export default  new CounterVm();
