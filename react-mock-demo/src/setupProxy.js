@@ -9,17 +9,20 @@ module.exports = function(app) {
   app.use(proxy('/art', { target: 'http://localhost:5500' , changeOrigin: false}));
 
   app.get("/sugr@mock",(req, res)=>{
-  	res.json(Mock.mock({
-  		"user|1-10": [{
-	      'name': '@cname',
-	      'id|+1': 1,
-	      'age|10-60': 0,    //10-60以内的随机数，0用来确定类型
-	      'birthday': '@date("yyyy-MM-dd")',    //年月日
-	      'city': '@city(true)'    //中国城市
-	    }],
+  	setTimeout(function(){
 
-	    email: 'admin@rap2.com',
-	    password: 'admin'
-	}))
+	  	res.json(Mock.mock({
+	  		"user|1-10": [{
+		      'name': '@cname',
+		      'id|+1': 1,
+		      'age|10-60': 0,    //10-60以内的随机数，0用来确定类型
+		      'birthday': '@date("yyyy-MM-dd")',    //年月日
+		      'city': '@city(true)'    //中国城市
+		    }],
+
+		    email: 'admin@rap2.com',
+		    password: 'admin'
+		}))
+  	},300 + Math.round(Math.random()*(800 - 300)))
   })
 };
