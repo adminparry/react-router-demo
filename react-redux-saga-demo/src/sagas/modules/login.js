@@ -5,26 +5,26 @@ import { login, login2 } from '../../services';
 
 export default {
 
-		* [INCREMENTASYNC_SAGAACTION] (action) {
-			console.log(action)
-			while(true){
-				if(action.json.user != 'zs')break;
+	* [INCREMENTASYNC_SAGAACTION] (action) {
+		console.log(action)
+		while(true){
+			if(action.json.user != 'zs')break;
 
-				yield delay(100);
-				yield put({ type: INCREATEMENT_COUNTER });
+			yield delay(100);
+			yield put({ type: INCREATEMENT_COUNTER });
 
-			}
-			// try {
-			// 	const auth = yield call(login, action.json);
-
-			// 	yield delay(1000);
-
-			// 	yield put({ type: INCREATEMENT_COUNTER });
-
-			// }catch(e){
-			// 	console.info(e)
-			// }
 		}
+		// try {
+		// 	const auth = yield call(login, action.json);
+
+		// 	yield delay(1000);
+
+		// 	yield put({ type: INCREATEMENT_COUNTER });
+
+		// }catch(e){
+		// 	console.info(e)
+		// }
+	}
 
 }
 
