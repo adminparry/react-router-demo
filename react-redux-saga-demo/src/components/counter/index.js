@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { counter_add_action, counter_take_action, incrementAsync_sagaAction } from "../../reducers/counter";
+import { counter_add_action, counter_take_action, incrementAsync_sagaAction } from "../../reducers/modules/counter";
 import "./counter.css";
 
 class Counter extends React.Component {
@@ -11,7 +11,7 @@ class Counter extends React.Component {
 			<div>
 				<button onClick={counter_add_action}>增加</button>
 				<button onClick={counter_take_action}>减少</button>
-				<input onClick={counter_async_action} type="button" value="异步增加" />
+				<input onClick={() => counter_async_action(counter)} type="button" value="异步增加" />
 				<p>{counter}</p>	
 				<svg className="icon-love" width="21" height="17" viewBox="0 0 21 17" xmlns="http://www.w3.org/2000/svg">
 				    <title>love</title>
@@ -28,7 +28,7 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
   counter_add_action: () => dispatch(counter_add_action()),
   counter_take_action: () => dispatch(counter_take_action()),
-  counter_async_action: () => dispatch(incrementAsync_sagaAction())
+  counter_async_action: (counter) => dispatch(incrementAsync_sagaAction({user:counter < 10 ? 'zs': 'js',counter:counter}))
 
 })
 
