@@ -23,20 +23,16 @@ const About = Loadable({
 const Routers = () => {
   return (
     <Router>
-        <Switcher />
+        <Switch>
+          <Route exact path="/" component={ Home } ></Route>
+
+          <Route exact path="/foo" component={ Foo } />
+          <Route exact path="/about" component={ About } />
+
+          <Route component={NoFound} />
+        </Switch>
     </Router>
   );
 }
-export const Switcher = () => {
-  return (
-    <Switch>
-      <Route exact path="/" component={ Home } ></Route>
 
-      <Route exact path="/foo" component={ Foo } />
-      <Route exact path="/about" component={ About } />
-
-      <Route component={NoFound} />
-    </Switch>
-  )
-}
 export default Routers;
