@@ -3,15 +3,24 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "babel-polyfill": "^6.26.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "3.0.1"
+    "react-loadable": "^5.5.0",
+    "react-redux": "^7.0.3",
+    "react-router-dom": "^5.0.0",
+    "react-scripts": "3.0.1",
+    "redux": "^4.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "server1": "cross-env BABEL_ENV=test nodemon server/bin.js",
+    "ssr": "nodemon --exec npx @babel/node ssr.js",
+    "dev:start": "nodemon --watch build --exec node \"./server/build/server.bundle.js\"",
+    "dev:build:server": "webpack --config ./server/webpack.server.js --watch"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -27,5 +36,20 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "asset-require-hook": "^1.2.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-react-app": "^9.0.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "cross-env": "^5.2.0",
+    "css-modules-require-hook": "^4.2.3",
+    "webpack-cli": "^3.3.5",
+    "webpack-merge": "^4.2.1",
+    "webpack-node-externals": "^1.7.2"
   }
 }

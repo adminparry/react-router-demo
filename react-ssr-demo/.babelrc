@@ -1,0 +1,18 @@
+{
+  "presets": [
+    "env",
+    "es2015",
+    "stage-0",
+    /**
+       Requires Babel "^7.0.0-0", but was loaded with "6.26.3". If you are sure you have a compatible version of @babel/core, it is likely that something in your build process is loading the wrong version. Inspect the stack trace of this error to look for the first entry that doesn't mention "@babel/core" or "babel-core" to see what is calling Babel
+      */
+    // "react-app",
+    "react",
+  ],
+  "plugins": [
+    // "transform-decorators-legacy",
+    // "react-loadable/babel",
+    // "@babel/plugin-syntax-jsx",
+    // "@babel/plugin-syntax-dynamic-import"
+  ]
+}
