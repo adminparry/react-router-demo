@@ -1,0 +1,112 @@
+{
+  "/Users/parry/githubs/react-family-demo/react-ssr-demo/node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/interopRequireDefault": [
+    {
+      "id": 0,
+      "name": "./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/interopRequireDefault.js",
+      "file": "entry.js",
+      "publicPath": "entry.js"
+    }
+  ],
+  "undefined": [
+    {
+      "id": 1,
+      "name": "react",
+      "file": "entry.js",
+      "publicPath": "entry.js"
+    },
+    {
+      "id": 2,
+      "name": "react-router-dom",
+      "file": "entry.js",
+      "publicPath": "entry.js"
+    },
+    {
+      "id": 5,
+      "name": "express",
+      "file": "entry.js",
+      "publicPath": "entry.js"
+    },
+    {
+      "id": 6,
+      "name": "path",
+      "file": "entry.js",
+      "publicPath": "entry.js"
+    },
+    {
+      "id": 13,
+      "name": "ejs",
+      "file": "entry.js",
+      "publicPath": "entry.js"
+    },
+    {
+      "id": 14,
+      "name": "react-dom/server",
+      "file": "entry.js",
+      "publicPath": "entry.js"
+    }
+  ],
+  "/Users/parry/githubs/react-family-demo/react-ssr-demo/node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/interopRequireWildcard": [
+    {
+      "id": 3,
+      "name": "./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/interopRequireWildcard.js",
+      "file": "entry.js",
+      "publicPath": "entry.js"
+    }
+  ],
+  "/Users/parry/githubs/react-family-demo/react-ssr-demo/express": [
+    {
+      "id": 4,
+      "name": "./express.js",
+      "file": "entry.js",
+      "publicPath": "entry.js"
+    }
+  ],
+  "./src/routers/ssr": [
+    {
+      "id": 7,
+      "name": "./src/routers/ssr.js",
+      "file": "entry.js",
+      "publicPath": "entry.js"
+    }
+  ],
+  "./NotFound": [
+    {
+      "id": 8,
+      "name": "./src/routers/NotFound.js",
+      "file": "entry.js",
+      "publicPath": "entry.js"
+    }
+  ],
+  "../components/home": [
+    {
+      "id": 9,
+      "name": "./src/components/home/index.js",
+      "file": "entry.js",
+      "publicPath": "entry.js"
+    }
+  ],
+  "../components/foo": [
+    {
+      "id": 10,
+      "name": "./src/components/foo/index.js",
+      "file": "entry.js",
+      "publicPath": "entry.js"
+    }
+  ],
+  "../components/about": [
+    {
+      "id": 11,
+      "name": "./src/components/about/index.js",
+      "file": "entry.js",
+      "publicPath": "entry.js"
+    }
+  ],
+  "./entry/port": [
+    {
+      "id": 12,
+      "name": "./entry/port.js",
+      "file": "entry.js",
+      "publicPath": "entry.js"
+    }
+  ]
+}

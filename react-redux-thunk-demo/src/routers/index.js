@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, StaticRouter, Route, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Loadable from 'react-loadable'
 import Loading from './Loading';
 
@@ -19,18 +19,23 @@ const About = Loadable({
   loader: () => import(/* webpackChunkName:"About" */'../components/about'),
   loading: Loading
 })
+const Counter = Loadable({
+  loader: () => import(/* webpackChunkName:"Counter" */'../components/counter'),
+  loading: Loading
+})
 
 const Routers = () => {
   return (
     <Router>
-      <Switch>
-        <Route exact path="/" component={Home} ></Route>
+        <Switch>
+          <Route exact path="/" component={ Home } ></Route>
 
-        <Route exact path="/foo" component={Foo} />
-        <Route exact path="/about" component={About} />
+          <Route exact path="/foo" component={ Foo } />
+          <Route exact path="/about" component={ About } />
+          <Route exact path="/counter" component={ Counter } />
 
-        <Route component={NoFound} />
-      </Switch>
+          <Route component={NoFound} />
+        </Switch>
     </Router>
   );
 }

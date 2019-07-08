@@ -1,25 +1,23 @@
 {
-  "name": "react-router-demo",
+  "name": "react-redux-promise-demo",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "ejs": "^2.6.2",
-    "express": "^4.17.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-loadable": "^5.5.0",
     "react-redux": "^7.0.3",
     "react-router-dom": "^5.0.0",
     "react-scripts": "3.0.1",
-    "redux": "^4.0.1"
+    "redux": "^4.0.1",
+    "redux-logger": "^3.0.6",
+    "redux-promise": "^0.6.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "webpack": "node webpack.base.js",
-    "ssr": "node output/express.js"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -35,11 +33,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "babel-plugin-transform-es2015-modules-amd": "^6.24.1",
-    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
-    "isomorphic-style-loader": "^5.1.0",
-    "webpack-node-externals": "^1.7.2"
   }
 }
